@@ -13,9 +13,9 @@ export const useRhymes = () => {
   //
   // [{ words, score, numSyllables }, ...]
   const getRhymes = (str) => {
-    if (process.env.NODE_ENV === "development") return setRhymes(testData);
+    // if (process.env.NODE_ENV === "development") return setRhymes(testData);
 
-    fetch(`https://api.datamuse.com/words?rel_rhy=${str}&max=4`)
+    fetch(`https://api.datamuse.com/words?rel_rhy=${str}&max=6`)
       .then((response) => response.json())
       .then((data) => setRhymes(data))
       .catch((error) => console.error(error));

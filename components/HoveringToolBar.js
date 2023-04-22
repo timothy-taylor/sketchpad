@@ -10,6 +10,7 @@ export const Portal = ({ children }) => {
     : null;
 };
 
+// TODO: see if we can drop the element from the DOM when not being used?
 export const HoveringToolbar = () => {
   const [lastSelection, setLastSelection] = useState("");
   const { rhymes, getRhymes } = useRhymes();
